@@ -1,16 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import { HashRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import About from "./components/About";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <HashRouter>
         <Routes>
-          <Route path="" element={} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<div>Not Found</div>} />
         </Routes>
       </HashRouter>
     </>
